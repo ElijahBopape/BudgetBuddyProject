@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/dialog_bg">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Minimum Monthly Goal"
+        android:textColor="@color/primary"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif"/>
+
+    <EditText
+        android:id="@+id/etMinGoal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:background="@drawable/edittext_bg"
+        android:layout_marginBottom="16dp"
+        android:textColor="@color/on_surface"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Maximum Monthly Budget"
+        android:textColor="@color/primary"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif"/>
+
+    <EditText
+        android:id="@+id/etMaxGoal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:background="@drawable/edittext_bg"
+        android:textColor="@color/on_surface"/>
+</LinearLayout>

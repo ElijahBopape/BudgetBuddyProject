@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Dressing up our BudgetBuddy in all blue, no action bar so it's clean -->
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.BudgetBuddyBlue" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorOnPrimary">@color/surface</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/on_surface</item>
+        <item name="android:fontFamily">sans-serif</item>    <!-- clean, readable font -->
+    </style>
+    <!-- Final theme we actually use -->
+    <style name="Theme.BudgetBuddyBlue" parent="Base.Theme.BudgetBuddyBlue" />
+</resources>

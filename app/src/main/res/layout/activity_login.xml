@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Login screen – first thing you see, so make it welcoming -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/primary"
+    android:padding="32dp"
+    android:gravity="center">
+
+    <!-- App name – big and bold, like a morning coffee ☕ -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BudgetBuddy"
+        android:textSize="34sp"
+        android:textColor="@color/surface"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        android:layout_marginBottom="4dp"/>
+
+    <!-- A tiny tagline that makes the user smile -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your personal finance companion"
+        android:textSize="16sp"
+        android:textColor="@color/light_blue"
+        android:fontFamily="sans-serif"
+        android:layout_marginBottom="48dp"/>
+
+    <!-- The white card that holds the login form, floating with a shadow -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        android:backgroundTint="@color/surface"
+        android:layout_marginBottom="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Username field – with a blue outline when focused -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                app:boxStrokeColor="@color/primary"
+                android:layout_marginBottom="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Username"
+                    android:textColor="@color/on_surface"
+                    android:fontFamily="sans-serif"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Password field – with a cute eye toggle to show/hide -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                app:boxStrokeColor="@color/primary"
+                app:endIconMode="password_toggle"
+                android:layout_marginBottom="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:textColor="@color/on_surface"
+                    android:fontFamily="sans-serif"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Login button – bright and inviting -->
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Login"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:backgroundTint="@color/primary"
+                android:textColor="@color/surface"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- Register button – subtle, because you want them to focus on logging in first -->
+            <Button
+                android:id="@+id/btnRegister"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create new account"
+                android:textColor="@color/primary"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>
